@@ -10,59 +10,135 @@
   <link rel="stylesheet" href="https://geologymining.jk.gov.in/library/bootstrap-4.6.1/css/bootstrap.min.css">
 
   <style>
-    :root{
-      --outer:#dc8504;   /* dark orange background */
-      --panel:#ff9800;   /* main panel orange */
-      --accent:#ffeb3b;  /* yellow highlight */
-      --text:#111;
-    }
+.animatecolor {
+            animation: mycolor 0.9s infinite !important;
+        }
 
-   html,body{
-  height:100%;
-  margin:0;
-  padding:0;
-  background:#ffffff !important;   /* WHITE PAGE BACKGROUND */
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  -webkit-print-color-adjust:exact;
-}
-    /* narrow vertical card like original image */
-    .card-wrap{width:360px;max-width:92%;margin:12px auto;border:3px solid #000;background:var(--outer);box-sizing:border-box;padding:6px}
-    .panel{background:var(--panel);padding:10px;border:1px solid rgba(0,0,0,.45)}
-    .note{color:#fff;margin-bottom:8px}
-    .note strong{color:var(--text);text-decoration:underline;font-size:16px}
-    .logo{display:block;margin:6px auto 6px;max-width:84px;height:auto}
-    h3.animate{animation:animatecol 0.9s infinite;margin:2px 0}
-    @keyframes animatecol{from{color:#e91e63}to{color:#3F51B5}}
-    .center{text-align:center}
-    .challan-no{font-weight:700;color:var(--text);margin:8px 0}
-    .tt{color:var(--accent);font-weight:700}
-    .mini{font-size:13px;color:var(--text);margin:2px 0}
-    .bigline{font-size:14px;font-weight:700;color:var(--text);margin:4px 0}
-    .details{background:transparent;margin-top:8px}
-    .longtable{width:100%;border-collapse:collapse;background:transparent;color:#fff}
-    .longtable td{padding:8px;border-bottom:1px solid rgba(0,0,0,.12);vertical-align:top}
-    .underline{font-weight:700;text-decoration:underline}
-    .approved-img{max-width:120px;display:block;margin:6px auto}
-    .print-btn{margin-top:8px;text-align:right}
-    hr.sep{height:2px;border-width:0;color:gray;background-color:gray;margin:8px 0}
+        @keyframes mycolor {
+            from {
+                color: #e91e63;
+            }
+            to{
+                color: #3F51B5;
+            }
+        }
 
-    /* print-friendly adjustments */
-    @media print{
-      html,body{background:white}
-      .card-wrap{border:none;background:white}
-      .panel{border:none;box-shadow:none}
-      .no-print{display:none}
-    }
+        .bgimage {
+            background-image: url("../images/home/logo.png");
+            background-color: #cccccc;
+            /* Used if the image is unavailable */
+            height: auto;
+            background-position: center;
+            /* Center the image */
+            background-repeat: no-repeat;
+            /* Do not repeat the image */
 
-    /* responsive smaller screens */
-    @media (max-width:420px){ .card-wrap{width:94%} }
-  </style>
+        }
+
+        .tt {
+            color: #ffeb3b;
+        }
+
+        td {
+            padding: 10px;
+            ;
+        }
+
+        .table td,
+        .table th {
+            padding: 0.40rem;
+        }
+        p{
+            color: white;
+        }
+
+        /* Receipt layout refinements: retain boxed rows and compact typography */
+        html, body {
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        #content1 > container > .container {
+            width: 396px;
+            max-width: 96%;
+            margin: 5px auto;
+            padding: 10px !important;
+            box-sizing: border-box;
+            border: 1px solid #777 !important;
+            background-color: #00bcd4 !important;
+        }
+        #content1 p {
+            font-size: 12px;
+            line-height: 1.35;
+            margin-bottom: 7px;
+        }
+        #content1 h4 {
+            font-size: 17px;
+            line-height: 1.3;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        #content1 h5 {
+            font-size: 15px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        #content1 h6 {
+            font-size: 12px;
+            margin-top: 4px;
+            margin-bottom: 4px;
+        }
+        #content1 .table {
+            width: 100%;
+            margin-bottom: 1rem;
+            border-collapse: collapse;
+            font-size: 12px;
+            color: #ffffff;
+        }
+        #content1 .table-success,
+        #content1 .table-success tbody,
+        #content1 .table-success tr,
+        #content1 .table-success td {
+            background-color: #159f81 !important;
+            color: #ffffff !important;
+        }
+        #content1 .table-success td {
+            padding: 7px !important;
+            border: 1px solid rgba(255,255,255,.35) !important;
+            vertical-align: top;
+        }
+        #content1 .table-bordered {
+            border: 1px solid rgba(0,0,0,.35);
+        }
+        #content1 .table-bordered th,
+        #content1 .table-bordered td {
+            border: 1px solid rgba(0,0,0,.35);
+            padding: 6px !important;
+            font-size: 12px;
+        }
+        #content1 img {
+            max-width: 100%;
+            height: auto;
+        }
+        #content1 #qrImage {
+            width: 100px;
+            height: 100px;
+        }
+        @media print {
+            html, body { background: #ffffff; }
+            #content1 > container > .container { border: 0 !important; }
+        }
+
+</style>
 </head>
 <body>
   <!-- Page Content  -->
         <div id="content1">
             <container>
-                <div class="container " style="border:1px solid;margin-top:5px;margin-bottom:5px;padding:20px; background-color:#ff9800;">
+                <div class="container " style="border:1px solid;margin-top:5px;margin-bottom:5px;padding:20px; background-color:#00bcd4;">
                                         <div class="bgimagee">
                        <p class="">
   <b>
@@ -101,27 +177,27 @@
                         </div>
 
                         <div class="text-center mb-4">
-                            <h4 class="d-inline mb-3"><b>Challan No. : </b> <span class="tt"><b>JK05B-7676571040</b></h4>
+                            <h4 class="d-inline mb-3"><b>Challan No. : </b> <span class="tt"><b>JK05B-18390826550</b></h4>
                             <h4><span><img id="qrImage" src="qr.jpg" width='100px;' height='100px;'></span><br><strong>(QR-Code)</strong></h4>
                         </div>
                         <div class="text-center mb-4">
-                            <h5 class="d-inline mb-3 tt"><b>Mineral : </b> <span><b>Rubble (5 MT)</b></h5>
+                            <h5 class="d-inline mb-3 tt"><b>Mineral : </b> <span><b>Silt Clay (6 MT)</b></h5>
                         </div>
                         <div class="text-center mb-4">
-                            <h4 class="text-center"><b>Validity from 15-08-2026 15:28 PM to 16-08-2026 20:28 PM</b></h4>
-                            <h4 class="text-center"><b>वैधता 15-08-2026 15:28 PM से 16-08-2026 20:28 PM तक </b></h4>
+                            <h4 class="text-center"><b>Validity from 14-11-2026 14:48 PM to 14-11-2026 17:48 PM</b></h4>
+                            <h4 class="text-center"><b>वैधता 14-11-2026 14:48 PM से 14-11-2026 17:48 PM तक </b></h4>
                         </div>
                         <h6 class="text-center"><b>URL: <span class="tt">https://geologymining.jk.gov.in/</span></b></h6>
                         <div class="py-4">
                     
-                            <table class="table table-striped table-success" style="background-color:#dc8504; color:#ffffff;">
+                            <table class="table table-striped table-success" style="background-color:#159f81; color:#ffffff;">
     <tr>
         <td>
             <p style="color:#ffffff;">
                 1. Type of mineral concessions Lease / License / Permit no. 
-                <b><span style="text-decoration: underline; color:#ffffff;">Permit </span></b><br> 
-                Issuing date <b><span style="text-decoration: underline; color:#ffffff;">16-08-2026</span></b> 
-                Valid upto <b><span style="text-decoration: underline; color:#ffffff;">16-08-2026</span></b>
+                <b><span style="text-decoration: underline; color:#ffffff;">Disposal Permit </span></b><br> 
+                Issuing date <b><span style="text-decoration: underline; color:#ffffff;">14-11-2026</span></b> 
+                Valid upto <b><span style="text-decoration: underline; color:#ffffff;">14-11-2026</span></b>
             </p>
         </td>
     </tr>
@@ -154,7 +230,7 @@
         <td>
             <p style="color:#ffffff;">
                 6. Name & Location of Stone crusher Unit and Holder 
-                <b><span style="text-decoration: underline; color:#ffffff;">Mohammad yousaf Dar Jalsheeri Baramulla</span></b>
+                <b><span style="text-decoration: underline; color:#ffffff;">Hafsa Builders and Suppliers Baramulla</span></b>
             </p>
         </td>
     </tr>
@@ -163,7 +239,7 @@
         <td>
             <p style="color:#ffffff;">
                 7. Type of Finished Products : Sand/Bajri/Kankra (Aggregate)/Dust etc. 
-                <b><span style="text-decoration: underline; color:#ffffff;">Rubble</span></b>
+                <b><span style="text-decoration: underline; color:#ffffff;">Silt Clay</span></b>
             </p>
         </td>
     </tr>
@@ -172,7 +248,7 @@
         <td>
             <p style="color:#ffffff;">
                 8. Quantity of mineral dispatched 
-                <b><span style="text-decoration: underline; color:#ffffff;">5</span></b> (in MT)
+                <b><span style="text-decoration: underline; color:#ffffff;">6</span></b> (in MT)
             </p>
         </td>
     </tr>
@@ -181,7 +257,7 @@
         <td>
             <p style="color:#ffffff;">
                 9. Date & Time of dispatch 
-                <b><span style="text-decoration: underline; color:#ffffff;">16-08-2026 15:28 PM</span> (Valid upto 5 Hours)</b>
+                <b><span style="text-decoration: underline; color:#ffffff;">14-11-2026 14:48 PM</span> (Valid upto 3 Hours)</b>
             </p>
         </td>
     </tr>
@@ -190,9 +266,9 @@
         <td>
             <p style="color:#ffffff;">
                 10. Route of the Transportation- Source 
-                <b><span style="text-decoration: underline; color:#ffffff;">Baramulla</span></b> 
+                <b><span style="text-decoration: underline; color:#ffffff;">Baramullla, Baramulla</span></b> 
                 Destination 
-                <b><span style="text-decoration: underline; color:#ffffff;">Pattan</span></b>
+                <b><span style="text-decoration: underline; color:#ffffff;">Verwan to soper</span></b>
             </p>
         </td>
     </tr>
@@ -201,9 +277,9 @@
         <td>
             <p style="color:#ffffff;">
                 11. Rate of Mineral 
-                <b><span style="text-decoration: underline; color:#ffffff;">Rs.123</span></b> 
+                <b><span style="text-decoration: underline; color:#ffffff;">Rs.66</span></b> 
                 Total Amount (Excluding GST and Transportation charges) 
-                <b><span style="text-decoration: underline; color:#ffffff;">Rs.615</span></b>
+                <b><span style="text-decoration: underline; color:#ffffff;">Rs.396</span></b>
             </p>
         </td>
     </tr>
@@ -212,11 +288,11 @@
         <td>
             <p style="color:#ffffff;">
                 12. GST Bill/No. 
-                <b><span style="text-decoration: underline; color:#ffffff;">NA</span></b>
+                <b><span style="text-decoration: underline; color:#ffffff;">01AATFH4035M1Z8</span></b>
                 Quantity 
                 <b><span style="text-decoration: underline; color:#ffffff;">5%</span></b> 
                 Amount 
-                <b><span style="text-decoration: underline; color:#ffffff;">Rs.30.75</span></b> 
+                <b><span style="text-decoration: underline; color:#ffffff;">Rs.19.8</span></b> 
                 (Enclose copy of GST Invoice)
             </p>
         </td>
@@ -226,7 +302,7 @@
         <td>
             <p style="color:#ffffff;">
                 13. Vehicle No. 
-                <b><span style="text-decoration: underline; color:#ffffff;">JK05B6677</span></b>
+                <b><span style="text-decoration: underline; color:#ffffff;">JK05A4191</span></b>
             </p>
         </td>
     </tr>
@@ -235,7 +311,7 @@
         <td>
             <p style="color:#ffffff;">
                 14. Name & Address of Consignee / Buyer / Purchaser
-                <b><span style="text-decoration: underline; color:#ffffff;">Firdous , Pattan</span></b>
+                <b><span style="text-decoration: underline; color:#ffffff;">M.d govt work , Soper</span></b>
             </p>
         </td>
     </tr>
@@ -244,7 +320,7 @@
         <td>
             <p style="color:#ffffff;">
                 15. Name & Phone No. of Driver
-                <b><span style="text-decoration: underline; color:#ffffff;">Feroz , 9906479944</span></b>
+                <b><span style="text-decoration: underline; color:#ffffff;">Mosain, 8491944472</span></b>
             </p>
         </td>
     </tr>
